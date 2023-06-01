@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 // components
 
@@ -7,6 +10,14 @@ import Navbar from "components/Navbars/AuthNavbar.js";
 import Footer from "components/Footers/Footer.js";
 
 export default function Landing() {
+  useEffect(() => {
+    AOS.init({
+      delay: 200,
+      duration: 1200,
+      once: false, 
+    });
+    AOS.refresh();
+  });
   return (
     <>
       <Navbar transparent />
@@ -24,17 +35,17 @@ export default function Landing() {
               className="w-full h-full absolute opacity-75 bg-black"
             ></span>
           </div>
-          <div className="container relative mx-auto">
+          <div className="container relative mx-auto" data-aos="fade-in">
             <div className="items-center flex flex-wrap">
               <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
                 <div className="pr-12">
                   <h1 className="text-white font-semibold text-5xl">
-                    Your story starts with us.
+                    Tu tranquilidad empieza con nosotros.
                   </h1>
                   <p className="mt-4 text-lg text-blueGray-200">
-                    This is a simple example of a Landing Page you can build
-                    using Notus NextJS. It features multiple CSS components
-                    based on the Tailwind CSS design system.
+                    Brindamos soluciones a medida en materia de seguros.
+                    Orientamos a Consorcion, Comercion, Pymes
+                    Empresas y Productores Agricolas
                   </p>
                 </div>
               </div>

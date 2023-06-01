@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 // components
 
@@ -7,6 +10,14 @@ import Navbar from "components/Navbars/AuthNavbar.js";
 import Footer from "components/Footers/Footer.js";
 
 export default function Landing() {
+  useEffect(() => {
+    AOS.init({
+      delay: 200,
+      duration: 1200,
+      once: false, 
+    });
+    AOS.refresh();
+  });
   return (
     <>
       <Navbar transparent />
@@ -24,17 +35,17 @@ export default function Landing() {
               className="w-full h-full absolute opacity-75 bg-black"
             ></span>
           </div>
-          <div className="container relative mx-auto">
+          <div className="container relative mx-auto" data-aos="fade-in">
             <div className="items-center flex flex-wrap">
               <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
-                <div className="pr-12">
+              <div className="pr-12">
                   <h1 className="text-white font-semibold text-5xl">
-                    Your story starts with us.
+                    Tu tranquilidad empieza con nosotros.
                   </h1>
                   <p className="mt-4 text-lg text-blueGray-200">
-                    This is a simple example of a Landing Page you can build
-                    using Notus NextJS. It features multiple CSS components
-                    based on the Tailwind CSS design system.
+                    Brindamos soluciones a medida en materia de seguros.
+                    Orientamos a Consorcios, Comercios, Pymes,
+                    Empresas y Productores Agricolas
                   </p>
                 </div>
               </div>
@@ -62,48 +73,57 @@ export default function Landing() {
         </div>
 
         <section className="pb-20 bg-blueGray-200 -mt-24">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-4" >
             <div className="flex flex-wrap">
-              <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
+              <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center" data-aos="fade-right">
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-4 py-5 flex-auto">
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
                       <i className="fas fa-award"></i>
                     </div>
-                    <h6 className="text-xl font-semibold">Awarded Agency</h6>
+                    <h6 className="text-xl font-semibold">30 años de experiencia construyendo confianza</h6>
                     <p className="mt-2 mb-4 text-blueGray-500">
-                      Divide details about your product or agency work into
-                      parts. A paragraph describing a feature will be enough.
+                    Construimos confianza a lo largo de 30 años de experiencia en el sector de seguros. Nuestra dedicación constante 
+                    a proporcionar soluciones personalizadas y servicio excepcional nos ha permitido establecer relaciones sólidas 
+                    con nuestros clientes. Confíe en nuestra experiencia y disfrute de la 
+                    tranquilidad de una compañía comprometida con su seguridad.
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="w-full md:w-4/12 px-4 text-center">
+              <div className="w-full md:w-4/12 px-4 text-center" data-aos="fade-down">
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-4 py-5 flex-auto">
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-lightBlue-400">
                       <i className="fas fa-retweet"></i>
                     </div>
-                    <h6 className="text-xl font-semibold">Free Revisions</h6>
+                    <h6 className="text-xl font-semibold">Trabajamos con compañias lideres</h6>
                     <p className="mt-2 mb-4 text-blueGray-500">
-                      Keep you user engaged by providing meaningful information.
-                      Remember that by this time, the user is curious.
+                    Trabajamos en estrecha colaboración con compañías líderes en la industria para ofrecer a nuestros clientes 
+                    soluciones de seguros de la más alta calidad. Nuestro compromiso con la excelencia nos impulsa a asociarnos 
+                    con las principales aseguradoras, lo que nos permite brindar una amplia gama de opciones y coberturas 
+                    adaptadas a las necesidades individuales de nuestros clientes. Al trabajar con estas compañías líderes, 
+                    podemos garantizar la confiabilidad, estabilidad y respaldo necesarios para proteger lo que más valoran 
+                    nuestros asegurados.
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="pt-6 w-full md:w-4/12 px-4 text-center">
+              <div className="pt-6 w-full md:w-4/12 px-4 text-center" data-aos="fade-left">
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-4 py-5 flex-auto">
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400">
                       <i className="fas fa-fingerprint"></i>
                     </div>
-                    <h6 className="text-xl font-semibold">Verified Company</h6>
+                    <h6 className="text-xl font-semibold">Servicios a la medida de tus necesidades</h6>
                     <p className="mt-2 mb-4 text-blueGray-500">
-                      Write a few lines about each one. A paragraph describing a
-                      feature will be enough. Keep you user engaged!
+                    Reconocemos que cada cliente es único y tiene requisitos específicos cuando se trata de seguros. Es por eso 
+                    que nos esforzamos por adaptar nuestros servicios para brindarte soluciones personalizadas que se ajusten 
+                    perfectamente a tu situación. Trabajamos de cerca para entender tus necesidades y diseñar un plan que te brinde la tranquilidad y 
+                    la seguridad que mereces. Obtendrás un servicio excepcional y una atención individualizada para satisfacer tus 
+                    requerimientos específicos.
                     </p>
                   </div>
                 </div>
@@ -116,24 +136,22 @@ export default function Landing() {
                   <i className="fas fa-user-friends text-xl"></i>
                 </div>
                 <h3 className="text-3xl mb-2 font-semibold leading-normal">
-                  Working with us is a pleasure
+                Coberturas
                 </h3>
                 <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600">
-                  Don't let your uses guess by attaching tooltips and popoves to
-                  any element. Just make sure you enable them first via
-                  JavaScript.
+                Comprendemos que al igual que las personas, cada empresa es única. Nuestro desafío es entender a fondo tu negocio para ofrecerte un servicio a medida. Nos tomamos el tiempo necesario para conocer tus necesidades y desafíos específicos, lo que nos permite diseñar soluciones de seguros personalizadas que se adapten perfectamente a tu empresa. Ya sea que requieras protección para tus activos, responsabilidad civil, seguro de empleados o cualquier otra cobertura, nuestro enfoque "Taylor Made" garantiza que obtengas la protección adecuada y un servicio excepcional que respalde el éxito continuo de tu negocio. Confía en nosotros para adaptarnos a tu empresa y brindarte la tranquilidad y seguridad que necesitas para avanzar con confianza en el mercado.
                 </p>
-                <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-blueGray-600">
+                {/* <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-blueGray-600">
                   The kit comes with three pre-built pages to help you get
                   started faster. You can change the text and images and you're
                   good to go. Just make sure you enable them first via
                   JavaScript.
-                </p>
-                <Link href="/">
+                </p> */}
+                {/* <Link href="/">
                   <a href="#pablo" className="font-bold text-blueGray-700 mt-8">
                     Check Notus NextJS!
                   </a>
-                </Link>
+                </Link> */}
               </div>
 
               <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
@@ -156,12 +174,11 @@ export default function Landing() {
                       ></polygon>
                     </svg>
                     <h4 className="text-xl font-bold text-white">
-                      Top Notch Services
+                      Taylor made
                     </h4>
                     <p className="text-md font-light mt-2 text-white">
-                      The Arctic Ocean freezes every winter and much of the
-                      sea-ice then thaws every summer, and that process will
-                      continue whatever happens.
+                    Asi como las personas, cada empresa es distinta. Nuestro desafio es entender su negocio para 
+                    brindarles un servicio taylor made.
                     </p>
                   </blockquote>
                 </div>
@@ -205,11 +222,11 @@ export default function Landing() {
                   <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-blueGray-200">
                     <i className="fas fa-rocket text-xl"></i>
                   </div>
-                  <h3 className="text-3xl font-semibold">A growing company</h3>
+                  <h3 className="text-3xl font-semibold">Una empresa familiar</h3>
                   <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
-                    The extension comes with three pre-built pages to help you
-                    get started faster. You can change the text and images and
-                    you're good to go.
+                  Somos una empresa familiar con raíces arraigadas en la pasión y el compromiso generacional. Nos distinguimos por nuestros valores fundamentales de 
+                  integridad, confianza y dedicación. Nos enorgullece ofrecer un enfoque cercano y personalizado, construyendo 
+                  relaciones a largo plazo basadas en la confianza mutua..
                   </p>
                   <ul className="list-none mt-6">
                     <li className="py-2">
@@ -221,7 +238,7 @@ export default function Landing() {
                         </div>
                         <div>
                           <h4 className="text-blueGray-500">
-                            Carefully crafted components
+                          Impulsados por la pasión y el compromiso generacional.
                           </h4>
                         </div>
                       </div>
@@ -235,7 +252,7 @@ export default function Landing() {
                         </div>
                         <div>
                           <h4 className="text-blueGray-500">
-                            Amazing page examples
+                          Valores fundamentales: integridad, confianza y dedicación.
                           </h4>
                         </div>
                       </div>
@@ -249,7 +266,7 @@ export default function Landing() {
                         </div>
                         <div>
                           <h4 className="text-blueGray-500">
-                            Dynamic components
+                          Enfoque cercano y personalizado, construyendo relaciones basadas en la confianza mutua.
                           </h4>
                         </div>
                       </div>
@@ -265,11 +282,9 @@ export default function Landing() {
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-center text-center mb-24">
               <div className="w-full lg:w-6/12 px-4">
-                <h2 className="text-4xl font-semibold">Here are our heroes</h2>
+                <h2 className="text-4xl font-semibold">Nos respaldan</h2>
                 <p className="text-lg leading-relaxed m-4 text-blueGray-500">
-                  According to the National Oceanic and Atmospheric
-                  Administration, Ted, Scambos, NSIDClead scentist, puts the
-                  potentially record maximum.
+                  Las empresas #1.
                 </p>
               </div>
             </div>
@@ -278,29 +293,29 @@ export default function Landing() {
                 <div className="px-6">
                   <img
                     alt="..."
-                    src="/img/team-1-800x800.jpg"
-                    className="shadow-lg rounded-full mx-auto max-w-120-px"
+                    src="/img/patronal.jpg"
+                    className="shadow-lg mx-auto max-w-600-px"
                   />
                   <div className="pt-6 text-center">
-                    <h5 className="text-xl font-bold">Ryan Tompson</h5>
+                    <h5 className="text-m font-bold">FEDERACION PATRONAL</h5>
                     <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
-                      Web Developer
+                    En el año 1921 abría sus puertas FEDERACIÓN PATRONAL C.S.L. iniciando sus actividades con un objetivo concreto: brindar cobertura al personal obrero de las empresas que administraban sus fundadores
                     </p>
                     <div className="mt-6">
-                      <button
+                      {/* <button
                         className="bg-lightBlue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                         type="button"
                       >
                         <i className="fab fa-twitter"></i>
-                      </button>
-                      <button
+                      </button> */}
+                      {/* <button
                         className="bg-lightBlue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                         type="button"
                       >
                         <i className="fab fa-facebook-f"></i>
-                      </button>
+                      </button> */}
                       <button
-                        className="bg-pink-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        className="bg-lightBlue-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                         type="button"
                       >
                         <i className="fab fa-dribbble"></i>
@@ -313,16 +328,18 @@ export default function Landing() {
                 <div className="px-6">
                   <img
                     alt="..."
-                    src="/img/team-2-800x800.jpg"
-                    className="shadow-lg rounded-full mx-auto max-w-120-px"
+                    src="/img/experta.jpg"
+                    className="shadow-lg mx-auto max-w-600-px"
                   />
                   <div className="pt-6 text-center">
-                    <h5 className="text-xl font-bold">Romina Hadid</h5>
+                    <h5 className="text-m font-bold">EXPERTA</h5>
                     <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
-                      Marketing Specialist
+                    Nuestra mision es ofrecer un servicio de alta calidad, incorporando sostenidamente capacidades, habilidades y 
+                    tecnologías que permitan establecer un claro liderazgo en la cobertura de riesgos laborales, otorgando seguridad 
+                    y soluciones a nuestros clientes.
                     </p>
                     <div className="mt-6">
-                      <button
+                      {/* <button
                         className="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                         type="button"
                       >
@@ -333,6 +350,12 @@ export default function Landing() {
                         type="button"
                       >
                         <i className="fab fa-facebook-f"></i>
+                      </button> */}
+                      <button
+                        className="bg-lightBlue-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        type="button"
+                      >
+                        <i className="fab fa-dribbble"></i>
                       </button>
                     </div>
                   </div>
@@ -342,15 +365,66 @@ export default function Landing() {
                 <div className="px-6">
                   <img
                     alt="..."
-                    src="/img/team-3-800x800.jpg"
-                    className="shadow-lg rounded-full mx-auto max-w-120-px"
+                    src="/img/provincia-art.jpg"
+                    className="shadow-lg mx-auto max-w-600-px"
                   />
                   <div className="pt-6 text-center">
-                    <h5 className="text-xl font-bold">Alexa Smith</h5>
+                    <h5 className="text-m font-bold">PROVINCIA ART</h5>
                     <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
-                      UI/UX Designer
+                    Trabajamos para proteger el trabajo de los otros, respaldando a las empresas, los organismos y las instituciones que hacen al 
+                    crecimiento de nuestro país. Somos la Aseguradora de Riesgos del Trabajo del Grupo Provincia, n° 1 de la 
+                    Provincia de Buenos Aires y una de las más importantes de la Argentina.
                     </p>
                     <div className="mt-6">
+                      {/* <button
+                        className="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        type="button"
+                      >
+                        <i className="fab fa-google"></i>
+                      </button>
+                      <button
+                        className="bg-lightBlue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        type="button"
+                      >
+                        <i className="fab fa-twitter"></i>
+                      </button>
+                      <button
+                        className="bg-blueGray-700 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        type="button"
+                      >
+                        <i className="fab fa-instagram"></i>
+                      </button> */}
+                      <button
+                        className="bg-lightBlue-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        type="button"
+                      >
+                        <i className="fab fa-dribbble"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+                <div className="px-6">
+                  <img
+                    alt="..."
+                    src="/img/galeno.jpg"
+                    className="shadow-lg mx-auto max-w-600-px"
+                  />
+                  <div className="pt-6 text-center">
+                    <h5 className="text-m font-bold">GALENO ART</h5>
+                    <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
+                    Cuidamos la salud de tu trabajo, porque brindamos un respaldo real en el ámbito laboral, una cobertura 
+                    integral e interdisciplinaria, con prevención - capacitación y gestión -, asesoramiento técnico y legal, 
+                    calidad prestacional y calidad médica superior.
+                    </p>
+                    <div className="mt-6">
+                      {/* <button
+                        className="bg-pink-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        type="button"
+                      >
+                        <i className="fab fa-dribbble"></i>
+                      </button>
                       <button
                         className="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                         type="button"
@@ -368,47 +442,12 @@ export default function Landing() {
                         type="button"
                       >
                         <i className="fab fa-instagram"></i>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-                <div className="px-6">
-                  <img
-                    alt="..."
-                    src="/img/team-4-470x470.png"
-                    className="shadow-lg rounded-full mx-auto max-w-120-px"
-                  />
-                  <div className="pt-6 text-center">
-                    <h5 className="text-xl font-bold">Jenna Kardi</h5>
-                    <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
-                      Founder and CEO
-                    </p>
-                    <div className="mt-6">
+                      </button> */}
                       <button
-                        className="bg-pink-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        className="bg-lightBlue-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                         type="button"
                       >
                         <i className="fab fa-dribbble"></i>
-                      </button>
-                      <button
-                        className="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-google"></i>
-                      </button>
-                      <button
-                        className="bg-lightBlue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-twitter"></i>
-                      </button>
-                      <button
-                        className="bg-blueGray-700 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-instagram"></i>
                       </button>
                     </div>
                   </div>
@@ -443,12 +482,10 @@ export default function Landing() {
             <div className="flex flex-wrap text-center justify-center">
               <div className="w-full lg:w-6/12 px-4">
                 <h2 className="text-4xl font-semibold text-white">
-                  Build something
+                Coberturas
                 </h2>
                 <p className="text-lg leading-relaxed mt-4 mb-4 text-blueGray-400">
-                  Put the potentially record low maximum sea ice extent tihs
-                  year down to low ice. According to the National Oceanic and
-                  Atmospheric Administration, Ted, Scambos.
+                Ofrecemos una amplia variedad de opciones de cobertura diseñadas específicamente para adaptarse a tus necesidades. Nuestro enfoque personalizado nos permite brindarte la protección adecuada para tus bienes y tu tranquilidad. Confía en nosotros para asegurar lo que más valoras.
                 </p>
               </div>
             </div>
@@ -458,11 +495,10 @@ export default function Landing() {
                   <i className="fas fa-medal text-xl"></i>
                 </div>
                 <h6 className="text-xl mt-5 font-semibold text-white">
-                  Excelent Services
+                  Personales
                 </h6>
                 <p className="mt-2 mb-4 text-blueGray-400">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                Tanto sus bienes personales como su vida y la de su familia necesitan que usted les brinde seguridad. Brindamos coberturas personales y contamos con una amplia oferta de compañías.
                 </p>
               </div>
               <div className="w-full lg:w-3/12 px-4 text-center">
@@ -470,11 +506,10 @@ export default function Landing() {
                   <i className="fas fa-poll text-xl"></i>
                 </div>
                 <h5 className="text-xl mt-5 font-semibold text-white">
-                  Grow your market
+                Consorcios y Comercios
                 </h5>
                 <p className="mt-2 mb-4 text-blueGray-400">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                Administrar un edificio o un emprendimiento comercial implica la obligación de garantizar la seguridad a toda persona involucrada y proteger sus capitales de trabajo y patrimonio.
                 </p>
               </div>
               <div className="w-full lg:w-3/12 px-4 text-center">
@@ -482,13 +517,46 @@ export default function Landing() {
                   <i className="fas fa-lightbulb text-xl"></i>
                 </div>
                 <h5 className="text-xl mt-5 font-semibold text-white">
-                  Launch time
+                Pymes y Empresas
                 </h5>
                 <p className="mt-2 mb-4 text-blueGray-400">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                Como empresa se expone a múltiples riesgos que ocasionarían problemas de índole económico y financiero. Ofrecemos un plan de administración de riesgos para mantener su empresa segura.
                 </p>
               </div>
+              <div className="w-full lg:w-3/12 px-4 text-center">
+                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
+                  <i className="fas fa-lightbulb text-xl"></i>
+                </div>
+                <h5 className="text-xl mt-5 font-semibold text-white">
+                Agricolas
+                </h5>
+                <p className="mt-2 mb-4 text-blueGray-400">
+                Son conocidos los imprevistos que afectan en la mayoría de los casos el trabajo de toda una temporada. Por eso mismo creemos adecuado ofrecerle las compañías especialistas en el mercado agrícola y las coberturas que ofrecemos.
+                </p>
+              </div>
+              <div className="w-full lg:w-3/12 px-4 text-center">
+                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
+                  <i className="fas fa-lightbulb text-xl"></i>
+                </div>
+                <h5 className="text-xl mt-5 font-semibold text-white">
+                Seguros Obligatorios
+                </h5>
+                <p className="mt-2 mb-4 text-blueGray-400">
+                Lo ayudamos a elegir la mejor compañía para lograr el cumplimiento de la obligación legal así como la incorporación de los beneficios que generen identificación y satisfacción de sus empleados.
+                </p>
+              </div>
+              <div className="w-full lg:w-3/12 px-4 text-center">
+                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
+                  <i className="fas fa-lightbulb text-xl"></i>
+                </div>
+                <h5 className="text-xl mt-5 font-semibold text-white">
+                Automotores
+                </h5>
+                <p className="mt-2 mb-4 text-blueGray-400">
+                El seguro más completo para tu auto. Con Todo Riesgo tenés todas las coberturas en una sola póliza. La mejor opción sin dudas.
+                </p>
+              </div>
+              
             </div>
           </div>
         </section>
@@ -499,23 +567,22 @@ export default function Landing() {
                 <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200">
                   <div className="flex-auto p-5 lg:p-10">
                     <h4 className="text-2xl font-semibold">
-                      Want to work with us?
+                      Pongase en contacto.
                     </h4>
                     <p className="leading-relaxed mt-1 mb-4 text-blueGray-500">
-                      Complete this form and we will get back to you in 24
-                      hours.
+                      Complete el siguiente formulario y nos estaremos comunicando a la brevedad.
                     </p>
                     <div className="relative w-full mb-3 mt-8">
                       <label
                         className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                         htmlFor="full-name"
                       >
-                        Full Name
+                        Nombre Completo
                       </label>
                       <input
                         type="text"
                         className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                        placeholder="Full Name"
+                        placeholder="Nombre completo"
                       />
                     </div>
 
@@ -538,13 +605,13 @@ export default function Landing() {
                         className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                         htmlFor="message"
                       >
-                        Message
+                        Mensaje
                       </label>
                       <textarea
                         rows="4"
                         cols="80"
                         className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
-                        placeholder="Type a message..."
+                        placeholder="Ingrese su mensaje..."
                       />
                     </div>
                     <div className="text-center mt-6">
@@ -552,7 +619,7 @@ export default function Landing() {
                         className="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                         type="button"
                       >
-                        Send Message
+                        Enviar
                       </button>
                     </div>
                   </div>
