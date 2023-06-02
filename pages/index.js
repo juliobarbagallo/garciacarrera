@@ -1,4 +1,9 @@
 import React, { useEffect } from "react";
+import { GiChampions, GiRelationshipBounds } from "react-icons/gi";
+import { TbRulerMeasure } from "react-icons/tb";
+import { MdOutlineHomeRepairService, MdFamilyRestroom } from "react-icons/md";
+import { BsFillRocketTakeoffFill } from "react-icons/bs";
+import { VscWorkspaceTrusted } from "react-icons/vsc";
 import Link from "next/link";
 
 import AOS from 'aos';
@@ -96,7 +101,7 @@ export default function Landing() {
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-4 py-5 flex-auto">
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-lightBlue-400">
-                      <i className="fas fa-retweet"></i>
+                      <GiChampions />
                     </div>
                     <h6 className="text-xl font-semibold">Trabajamos con compañias lideres</h6>
                     <p className="mt-2 mb-4 text-blueGray-500">
@@ -115,7 +120,7 @@ export default function Landing() {
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-4 py-5 flex-auto">
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400">
-                      <i className="fas fa-fingerprint"></i>
+                      <TbRulerMeasure />
                     </div>
                     <h6 className="text-xl font-semibold">Servicios a la medida de tus necesidades</h6>
                     <p className="mt-2 mb-4 text-blueGray-500">
@@ -133,12 +138,12 @@ export default function Landing() {
             <div className="flex flex-wrap items-center mt-32">
               <div className="w-full md:w-5/12 px-4 mr-auto ml-auto">
                 <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
-                  <i className="fas fa-user-friends text-xl"></i>
+                  <MdOutlineHomeRepairService style={{ fontSize: '2.5rem', color: 'blue' }} />
                 </div>
                 <h3 className="text-3xl mb-2 font-semibold leading-normal">
                 Coberturas
                 </h3>
-                <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600">
+                <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-800">
                 Comprendemos que al igual que las personas, cada empresa es única. Nuestro desafío es entender a fondo tu negocio para ofrecerte un servicio a 
                 medida. Nos tomamos el tiempo necesario para conocer tus necesidades y desafíos específicos, lo que nos permite diseñar soluciones de seguros 
                 personalizadas que se adapten perfectamente a tu empresa. Ya sea que requieras protección para tus activos, responsabilidad civil, seguro de empleados 
@@ -220,13 +225,13 @@ export default function Landing() {
                 <img
                   alt="..."
                   className="max-w-full rounded-lg shadow-lg"
-                  src="https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+                  src="/img/family-business.jpg"
                 />
               </div>
               <div className="w-full md:w-5/12 ml-auto mr-auto px-4">
                 <div className="md:pr-12">
                   <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-blueGray-200">
-                    <i className="fas fa-rocket text-xl"></i>
+                    <MdFamilyRestroom style={{ fontSize: '2.5rem', color: 'blue' }}/>
                   </div>
                   <h3 className="text-3xl font-semibold">Una empresa familiar</h3>
                   <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
@@ -239,7 +244,7 @@ export default function Landing() {
                       <div className="flex items-center">
                         <div>
                           <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-blueGray-100 mr-3">
-                            <i className="fas fa-fingerprint"></i>
+                            <BsFillRocketTakeoffFill style={{ fontSize: '1rem', color: 'black' }} />
                           </span>
                         </div>
                         <div>
@@ -253,7 +258,7 @@ export default function Landing() {
                       <div className="flex items-center">
                         <div>
                           <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-blueGray-100 mr-3">
-                            <i className="fab fa-html5"></i>
+                          <VscWorkspaceTrusted style={{ fontSize: '1rem', color: 'black' }} />
                           </span>
                         </div>
                         <div>
@@ -267,7 +272,7 @@ export default function Landing() {
                       <div className="flex items-center">
                         <div>
                           <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-blueGray-100 mr-3">
-                            <i className="far fa-paper-plane"></i>
+                            <GiRelationshipBounds style={{ fontSize: '1rem', color: 'black' }} />
                           </span>
                         </div>
                         <div>
@@ -497,6 +502,17 @@ export default function Landing() {
               </div>
             </div>
             <div className="flex flex-wrap mt-12 justify-center">
+            <div className="w-full lg:w-3/12 px-4 text-center">
+                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
+                  <i className="fas fa-medal text-xl"></i>
+                </div>
+                <h6 className="text-xl mt-5 font-semibold text-white">
+                  Automotor
+                </h6>
+                <p className="mt-2 mb-4 text-blueGray-400">
+                Asegura tu auto con nuestra cobertura automotor y viaja con total confianza. Nuestro objetivo es proteger tu vehículo y brindarte la tranquilidad que mereces en cada trayecto. Con nuestras opciones de cobertura, estarás respaldado ante cualquier imprevisto.
+                </p>
+              </div>
               <div className="w-full lg:w-3/12 px-4 text-center">
                 <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
                   <i className="fas fa-medal text-xl"></i>
