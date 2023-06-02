@@ -139,7 +139,11 @@ export default function Landing() {
                 Coberturas
                 </h3>
                 <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600">
-                Comprendemos que al igual que las personas, cada empresa es única. Nuestro desafío es entender a fondo tu negocio para ofrecerte un servicio a medida. Nos tomamos el tiempo necesario para conocer tus necesidades y desafíos específicos, lo que nos permite diseñar soluciones de seguros personalizadas que se adapten perfectamente a tu empresa. Ya sea que requieras protección para tus activos, responsabilidad civil, seguro de empleados o cualquier otra cobertura, nuestro enfoque "Taylor Made" garantiza que obtengas la protección adecuada y un servicio excepcional que respalde el éxito continuo de tu negocio. Confía en nosotros para adaptarnos a tu empresa y brindarte la tranquilidad y seguridad que necesitas para avanzar con confianza en el mercado.
+                Comprendemos que al igual que las personas, cada empresa es única. Nuestro desafío es entender a fondo tu negocio para ofrecerte un servicio a 
+                medida. Nos tomamos el tiempo necesario para conocer tus necesidades y desafíos específicos, lo que nos permite diseñar soluciones de seguros 
+                personalizadas que se adapten perfectamente a tu empresa. Ya sea que requieras protección para tus activos, responsabilidad civil, seguro de empleados 
+                o cualquier otra cobertura, nuestro enfoque "Taylor Made" garantiza que obtengas la protección adecuada y un servicio excepcional que respalde el éxito 
+                continuo de tu negocio. Confía en nosotros para adaptarnos a tu empresa y brindarte la tranquilidad y seguridad que necesitas para avanzar con confianza en el mercado.
                 </p>
                 {/* <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-blueGray-600">
                   The kit comes with three pre-built pages to help you get
@@ -154,23 +158,25 @@ export default function Landing() {
                 </Link> */}
               </div>
 
-              <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
-                <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-blueGray-700">
+              <div className="w-full md:w-4/12 px-4 mr-auto ml-auto" >
+                <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg " style={{ backgroundColor: "#094988" }}>
                   <img
                     alt="..."
                     src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80"
                     className="w-full align-middle rounded-t-lg"
                   />
-                  <blockquote className="relative p-8 mb-4">
+                  <blockquote className="relative p-8 mb-4 my-important-class" style={{ backgroundColor: "#094988" }}>
                     <svg
                       preserveAspectRatio="none"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 583 95"
                       className="absolute left-0 w-full block h-95-px -top-94-px"
+                      
                     >
                       <polygon
                         points="-30,95 583,95 583,65"
-                        className="text-blueGray-700 fill-current"
+                        className="fill-current"
+                        style={{ color: "#094988" }}
                       ></polygon>
                     </svg>
                     <h4 className="text-xl font-bold text-white">
@@ -457,7 +463,7 @@ export default function Landing() {
           </div>
         </section>
 
-        <section className="pb-20 relative block bg-blueGray-800">
+        <section className="pb-20 relative block " style={{ backgroundColor: "#094988" }}>
           <div
             className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20 h-20"
             style={{ transform: "translateZ(0)" }}
@@ -472,8 +478,9 @@ export default function Landing() {
               y="0"
             >
               <polygon
-                className="text-blueGray-800 fill-current"
+                className="fill-current"
                 points="2560 0 2560 100 0 100"
+                style={{ color: "#094988" }}
               ></polygon>
             </svg>
           </div>
@@ -560,7 +567,7 @@ export default function Landing() {
             </div>
           </div>
         </section>
-        <section className="relative block py-24 lg:pt-0 bg-blueGray-800">
+        <section className="relative block py-24 lg:pt-0 " style={{ backgroundColor: "#094988" }}>
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-center lg:-mt-64 -mt-48">
               <div className="w-full lg:w-6/12 px-4">
