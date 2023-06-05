@@ -6,7 +6,7 @@ import { BsFillRocketTakeoffFill, BsFillCarFrontFill, BsFillPersonCheckFill, BsF
   BsFillBriefcaseFill } from "react-icons/bs";
 import { VscWorkspaceTrusted, VscLaw } from "react-icons/vsc";
 import { FloatingWhatsApp } from 'react-floating-whatsapp'
-import avatarImg from '../public/img/patricia.webp'
+import avatarImg from '../public/img/gc.png'
 import Link from "next/link";
 
 import AOS from 'aos';
@@ -657,7 +657,7 @@ export default function Landing() {
         </section>
         <FloatingWhatsApp {...{accountName: "A. Garcia Carrera e Hijos SA", phoneNumber: "1135612774",
          avatar:avatarImg.src, statusMessage:"Disponible Lun a Vier de 09:00 a 18:00",
-         chatMessage: "Hola, mi nombre es Patricia, en que puedo ayudarte?",
+         chatMessage: "Hola, mi nombre es Garcia Carrera.",
          placeholder: "Mensaje"}}/>
       </main>
       <Footer />
