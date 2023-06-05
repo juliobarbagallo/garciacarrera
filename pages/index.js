@@ -1,9 +1,11 @@
 import React, { useEffect } from "react";
-import { GiChampions, GiRelationshipBounds } from "react-icons/gi";
+import { GiChampions, GiRelationshipBounds, GiFarmTractor } from "react-icons/gi";
 import { TbRulerMeasure } from "react-icons/tb";
 import { MdOutlineHomeRepairService, MdFamilyRestroom } from "react-icons/md";
-import { BsFillRocketTakeoffFill } from "react-icons/bs";
-import { VscWorkspaceTrusted } from "react-icons/vsc";
+import { BsFillRocketTakeoffFill, BsFillCarFrontFill, BsFillPersonCheckFill, BsFillBuildingFill,
+  BsFillBriefcaseFill } from "react-icons/bs";
+import { VscWorkspaceTrusted, VscLaw } from "react-icons/vsc";
+
 import Link from "next/link";
 
 import AOS from 'aos';
@@ -136,7 +138,7 @@ export default function Landing() {
             </div>
 
             <div className="flex flex-wrap items-center mt-32">
-              <div className="w-full md:w-5/12 px-4 mr-auto ml-auto">
+              <div className="w-full md:w-5/12 px-4 mr-auto ml-auto" data-aos="fade-right">
                 <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
                   <MdOutlineHomeRepairService style={{ fontSize: '2.5rem', color: 'blue' }} />
                 </div>
@@ -163,7 +165,7 @@ export default function Landing() {
                 </Link> */}
               </div>
 
-              <div className="w-full md:w-4/12 px-4 mr-auto ml-auto" >
+              <div className="w-full md:w-4/12 px-4 mr-auto ml-auto" data-aos="fade-left">
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg " style={{ backgroundColor: "#094988" }}>
                   <img
                     alt="..."
@@ -221,14 +223,14 @@ export default function Landing() {
 
           <div className="container mx-auto px-4">
             <div className="items-center flex flex-wrap">
-              <div className="w-full md:w-4/12 ml-auto mr-auto px-4">
+              <div className="w-full md:w-4/12 ml-auto mr-auto px-4" data-aos="fade-right">
                 <img
                   alt="..."
                   className="max-w-full rounded-lg shadow-lg"
                   src="/img/family-business.jpg"
                 />
               </div>
-              <div className="w-full md:w-5/12 ml-auto mr-auto px-4">
+              <div className="w-full md:w-5/12 ml-auto mr-auto px-4" data-aos="fade-left">
                 <div className="md:pr-12">
                   <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-blueGray-200">
                     <MdFamilyRestroom style={{ fontSize: '2.5rem', color: 'blue' }}/>
@@ -503,8 +505,8 @@ export default function Landing() {
             </div>
             <div className="flex flex-wrap mt-12 justify-center">
             <div className="w-full lg:w-3/12 px-4 text-center">
-                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
-                  <i className="fas fa-medal text-xl"></i>
+                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center" data-aos="flip-up">
+                  <BsFillCarFrontFill />
                 </div>
                 <h6 className="text-xl mt-5 font-semibold text-white">
                   Automotor
@@ -514,8 +516,8 @@ export default function Landing() {
                 </p>
               </div>
               <div className="w-full lg:w-3/12 px-4 text-center">
-                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
-                  <i className="fas fa-medal text-xl"></i>
+                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center" data-aos="flip-up">
+                  <BsFillPersonCheckFill />
                 </div>
                 <h6 className="text-xl mt-5 font-semibold text-white">
                   Personales
@@ -525,8 +527,8 @@ export default function Landing() {
                 </p>
               </div>
               <div className="w-full lg:w-3/12 px-4 text-center">
-                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
-                  <i className="fas fa-poll text-xl"></i>
+                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center" data-aos="flip-up">
+                  <BsFillBuildingFill />
                 </div>
                 <h5 className="text-xl mt-5 font-semibold text-white">
                 Consorcios y Comercios
@@ -536,8 +538,8 @@ export default function Landing() {
                 </p>
               </div>
               <div className="w-full lg:w-3/12 px-4 text-center">
-                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
-                  <i className="fas fa-lightbulb text-xl"></i>
+                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center" data-aos="flip-up">
+                  <BsFillBriefcaseFill />
                 </div>
                 <h5 className="text-xl mt-5 font-semibold text-white">
                 Pymes y Empresas
@@ -547,8 +549,8 @@ export default function Landing() {
                 </p>
               </div>
               <div className="w-full lg:w-3/12 px-4 text-center">
-                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
-                  <i className="fas fa-lightbulb text-xl"></i>
+                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center" data-aos="flip-up">
+                  <GiFarmTractor />
                 </div>
                 <h5 className="text-xl mt-5 font-semibold text-white">
                 Agricolas
@@ -558,8 +560,8 @@ export default function Landing() {
                 </p>
               </div>
               <div className="w-full lg:w-3/12 px-4 text-center">
-                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
-                  <i className="fas fa-lightbulb text-xl"></i>
+                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center" data-aos="flip-up">
+                  <VscLaw />
                 </div>
                 <h5 className="text-xl mt-5 font-semibold text-white">
                 Seguros Obligatorios
@@ -568,7 +570,7 @@ export default function Landing() {
                 Lo ayudamos a elegir la mejor compañía para lograr el cumplimiento de la obligación legal así como la incorporación de los beneficios que generen identificación y satisfacción de sus empleados.
                 </p>
               </div>
-              <div className="w-full lg:w-3/12 px-4 text-center">
+              {/* <div className="w-full lg:w-3/12 px-4 text-center">
                 <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
                   <i className="fas fa-lightbulb text-xl"></i>
                 </div>
@@ -578,7 +580,7 @@ export default function Landing() {
                 <p className="mt-2 mb-4 text-blueGray-400">
                 El seguro más completo para tu auto. Con Todo Riesgo tenés todas las coberturas en una sola póliza. La mejor opción sin dudas.
                 </p>
-              </div>
+              </div> */}
               
             </div>
           </div>
