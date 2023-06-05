@@ -5,7 +5,8 @@ import { MdOutlineHomeRepairService, MdFamilyRestroom } from "react-icons/md";
 import { BsFillRocketTakeoffFill, BsFillCarFrontFill, BsFillPersonCheckFill, BsFillBuildingFill,
   BsFillBriefcaseFill } from "react-icons/bs";
 import { VscWorkspaceTrusted, VscLaw } from "react-icons/vsc";
-
+import { FloatingWhatsApp } from 'react-floating-whatsapp'
+import avatarImg from '../public/img/patricia.webp'
 import Link from "next/link";
 
 import AOS from 'aos';
@@ -25,6 +26,7 @@ export default function Landing() {
     });
     AOS.refresh();
   });
+  
   return (
     <>
       <Navbar transparent />
@@ -653,6 +655,10 @@ export default function Landing() {
             </div>
           </div>
         </section>
+        <FloatingWhatsApp {...{accountName: "Patricia Exposito", phoneNumber: "1135612774",
+         avatar:avatarImg.src, statusMessage:"Disponible Lun a Vier de 09:00 a 18:00",
+         chatMessage: "Hola, mi nombre es Patricia, en que puedo ayudarte?",
+         placeholder: "Mensaje"}}/>
       </main>
       <Footer />
     </>
