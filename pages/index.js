@@ -655,7 +655,7 @@ export default function Landing() {
             </div>
           </div>
         </section>
-        <FloatingWhatsApp {...{accountName: "Patricia Exposito", phoneNumber: "1135612774",
+        <FloatingWhatsApp {...{accountName: "A. Garcia Carrera e Hijos SA", phoneNumber: "1135612774",
          avatar:avatarImg.src, statusMessage:"Disponible Lun a Vier de 09:00 a 18:00",
          chatMessage: "Hola, mi nombre es Patricia, en que puedo ayudarte?",
          placeholder: "Mensaje"}}/>
