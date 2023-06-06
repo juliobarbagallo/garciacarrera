@@ -18,9 +18,9 @@ export default function Navbar(props) {
               Garcia Carrera
             
           </Link> */}
-          <Link href="/">
+          {/* <Link href="/">
             <img src={logo.src} alt="Garcia Carrera logo" />
-          </Link>
+          </Link> */}
           <button
             className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
             type="button"

@@ -7,6 +7,7 @@ import { BsFillRocketTakeoffFill, BsFillCarFrontFill, BsFillPersonCheckFill, BsF
 import { VscWorkspaceTrusted, VscLaw } from "react-icons/vsc";
 import { FloatingWhatsApp } from 'react-floating-whatsapp'
 import avatarImg from '../public/img/gc.png'
+import logo from '../public/img/garciacarrera-logo.png'
 import Link from "next/link";
 
 import AOS from 'aos';
@@ -29,6 +30,9 @@ export default function Landing() {
   
   return (
     <>
+    <div>
+      <img src={logo.src} alt="Garcia Carrera logo" />
+    </div>
       <Navbar transparent />
       <main>
         <div className="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
