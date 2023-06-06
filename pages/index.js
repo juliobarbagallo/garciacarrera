@@ -57,8 +57,8 @@ export default function Landing() {
                   </h1>
                   <p className="mt-4 text-lg text-blueGray-200">
                     Brindamos soluciones a medida en materia de seguros.
-                    Orientamos a Consorcios, Comercios, Pymes,
-                    Empresas y Productores Agricolas
+                    Orientamos a Empresas, Pymes, flota de vehículos, comercios,
+                     productores agrícolas, consorcios, etc
                   </p>
                 </div>
               </div>
