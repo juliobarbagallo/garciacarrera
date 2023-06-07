@@ -1,5 +1,5 @@
 import React from "react";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -43,13 +43,18 @@ export default function Footer() {
               >                 
                   <FaWhatsapp style={{ fontSize: '2rem', color: 'green' }} />
                 </button>
-                {/* <button
-                  className="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                  type="button"
-                >
-                  <i className="fab fa-facebook-square"></i>
-                </button>
                 <button
+                  className="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 flex flex-col items-center justify-center rounded-full outline-none focus:outline-none mr-2"
+                  type="button"
+                  onClick={() => {
+                    const instagramAccount = 'Garciacarreraehijos'; 
+                    const url = `https://www.instagram.com/${instagramAccount}`;
+                    window.open(url, '_blank');
+                  }}
+                >
+                  <FaInstagram style={{ fontSize: '2rem', }} />
+                </button>
+                {/* <button
                   className="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                   type="button"
                 >
