@@ -1,4 +1,5 @@
 import React from "react";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -27,17 +28,22 @@ export default function Footer() {
           <div className="flex flex-wrap text-center lg:text-left">
             <div className="w-full lg:w-6/12 px-4">
               <h4 className="text-3xl font-semibold">Mantengase en contacto!</h4>
-              <h5 className="text-lg mt-0 mb-2 text-blueGray-600">
+              {/* <h5 className="text-lg mt-0 mb-2 text-blueGray-600">
                 Encuentrenos en las siguientes redes sociales.
-              </h5>
+              </h5> */}
               <div className="mt-6 lg:mb-0 mb-6">
-                <button
-                  className="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                  type="button"
-                >
-                  <i className="fab fa-twitter"></i>
+              <button
+                className="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 flex flex-col items-center justify-center rounded-full outline-none focus:outline-none mr-2"
+                type="button"
+                onClick={() => {
+                  const phoneNumber = '1135612774';
+                  const url = `https://web.whatsapp.com/send?phone=${phoneNumber}`;
+                  window.open(url, '_blank');
+                }}
+              >                 
+                  <FaWhatsapp style={{ fontSize: '2rem', color: 'green' }} />
                 </button>
-                <button
+                {/* <button
                   className="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                   type="button"
                 >
@@ -48,7 +54,7 @@ export default function Footer() {
                   type="button"
                 >
                   <i className="fab fa-dribbble"></i>
-                </button>
+                </button> */}
                 {/* <button
                   className="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                   type="button"
