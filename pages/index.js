@@ -384,11 +384,11 @@ export default function Landing() {
                 <div className="px-6">
                   <img
                     alt="..."
-                    src="/img/provincia-art.jpg"
+                    src="/img/psegurosBco-1.png"
                     className="shadow-lg mx-auto max-w-600-px"
                   />
                   <div className="pt-6 text-center">
-                    <h5 className="text-m font-bold">PROVINCIA ART</h5>
+                    <h5 className="text-m font-bold">PROVINCIA SEGUROS</h5>
                     <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
                     Trabajamos para proteger el trabajo de los otros, respaldando a las empresas, los organismos y las instituciones que hacen al 
                     crecimiento de nuestro país. Somos la Aseguradora de Riesgos del Trabajo del Grupo Provincia, n° 1 de la 
