@@ -32,7 +32,7 @@ export default function Footer() {
                 Encuentrenos en las siguientes redes sociales.
               </h5> */}
               <div className="mt-6 lg:mb-0 mb-6">
-              <button
+              {/* <button
                 className="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 flex flex-col items-center justify-center rounded-full outline-none focus:outline-none mr-2"
                 type="button"
                 onClick={() => {
@@ -42,7 +42,7 @@ export default function Footer() {
                 }}
               >                 
                   <FaWhatsapp style={{ fontSize: '2rem', color: 'green' }} />
-                </button>
+                </button> */}
                 <button
                   className="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 flex flex-col items-center justify-center rounded-full outline-none focus:outline-none mr-2"
                   type="button"

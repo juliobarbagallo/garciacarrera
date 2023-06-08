@@ -5,8 +5,8 @@ import { MdOutlineHomeRepairService, MdFamilyRestroom } from "react-icons/md";
 import { BsFillRocketTakeoffFill, BsFillCarFrontFill, BsFillPersonCheckFill, BsFillBuildingFill,
   BsFillBriefcaseFill } from "react-icons/bs";
 import { VscWorkspaceTrusted, VscLaw } from "react-icons/vsc";
-// import { FloatingWhatsApp } from 'react-floating-whatsapp'
-// import avatarImg from '../public/img/gc.png'
+import { FloatingWhatsApp } from 'react-floating-whatsapp'
+import avatarImg from '../public/img/gc.png'
 import logo from '../public/img/garciacarrera-logo.png'
 import Link from "next/link";
 
@@ -659,10 +659,10 @@ export default function Landing() {
             </div>
           </div>
         </section>
-        {/* <FloatingWhatsApp {...{accountName: "A. Garcia Carrera e Hijos SA", phoneNumber: "1135612774",
+        <FloatingWhatsApp {...{accountName: "A. Garcia Carrera e Hijos SA", phoneNumber: "1135612774",
          avatar:avatarImg.src, statusMessage:"Disponible Lun a Vier de 09:00 a 18:00",
          chatMessage: "Hola, mi nombre es Garcia Carrera.",
-         placeholder: "Mensaje"}}/> */}
+         placeholder: "Mensaje"}}/>
       </main>
       <Footer />
     </>
