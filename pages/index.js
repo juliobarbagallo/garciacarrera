@@ -8,6 +8,7 @@ import { VscWorkspaceTrusted, VscLaw } from "react-icons/vsc";
 import { FloatingWhatsApp } from 'react-floating-whatsapp'
 import avatarImg from '../public/img/gc.png'
 import logo from '../public/img/garciacarrera-logo.png'
+import { Player } from '@lottiefiles/react-lottie-player';
 import Link from "next/link";
 
 import AOS from 'aos';
@@ -173,10 +174,16 @@ export default function Landing() {
 
               <div className="w-full md:w-4/12 px-4 mr-auto ml-auto" data-aos="fade-left">
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg " style={{ backgroundColor: "#094988" }}>
-                  <img
+                  {/* <img
                     alt="..."
-                    src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80"
+                    src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80"                    
                     className="w-full align-middle rounded-t-lg"
+                  /> */}
+                  <Player
+                    src='/img/truck.json'
+                    className="player"
+                    loop
+                    autoplay
                   />
                   <blockquote className="relative p-8 mb-4 my-important-class" style={{ backgroundColor: "#094988" }}>
                     <svg
@@ -230,11 +237,17 @@ export default function Landing() {
           <div className="container mx-auto px-4">
             <div className="items-center flex flex-wrap">
               <div className="w-full md:w-4/12 ml-auto mr-auto px-4" data-aos="fade-right">
-                <img
+                {/* <img
                   alt="..."
                   className="max-w-full rounded-lg shadow-lg"
                   src="/img/family-business.jpg"
-                />
+                /> */}
+                <Player
+                    src='/img/family.json'
+                    className="player"
+                    loop
+                    autoplay
+                  />
               </div>
               <div className="w-full md:w-5/12 ml-auto mr-auto px-4" data-aos="fade-left">
                 <div className="md:pr-12">
