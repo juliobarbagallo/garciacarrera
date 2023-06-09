@@ -322,8 +322,8 @@ export default function Landing() {
                           </div>
                         </div> */}
                         <div className="w-full flex justify-center">
-                          <div className="w-full md:w-8/12 lg:w-6/12 lg:mb-0 mb-12 px-4">
-                            <div className="px-6 flex justify-center items-center h-64">
+  <div className="w-full md:w-10/12 lg:w-8/12 lg:mb-0 mb-12 px-4">
+    <div className="px-6 flex justify-center items-center h-96">
                               <Carousel />
                             </div>
                           </div>
