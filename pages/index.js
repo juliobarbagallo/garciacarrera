@@ -15,9 +15,10 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 // components
-
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Navbar from "components/Navbars/AuthNavbar.js";
 import Footer from "components/Footers/Footer.js";
+import Carousel from "components/Carousel/Carousel";
 
 export default function Landing() {
   useEffect(() => {
@@ -159,26 +160,10 @@ export default function Landing() {
                 o cualquier otra cobertura, nuestro enfoque "Taylor Made" garantiza que obtengas la protección adecuada y un servicio excepcional que respalde el éxito 
                 continuo de tu negocio. Confía en nosotros para adaptarnos a tu empresa y brindarte la tranquilidad y seguridad que necesitas para avanzar con confianza en el mercado.
                 </p>
-                {/* <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-blueGray-600">
-                  The kit comes with three pre-built pages to help you get
-                  started faster. You can change the text and images and you're
-                  good to go. Just make sure you enable them first via
-                  JavaScript.
-                </p> */}
-                {/* <Link href="/">
-                  <a href="#pablo" className="font-bold text-blueGray-700 mt-8">
-                    Check Notus NextJS!
-                  </a>
-                </Link> */}
               </div>
 
               <div className="w-full md:w-4/12 px-4 mr-auto ml-auto" data-aos="fade-left">
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg " style={{ backgroundColor: "#094988" }}>
-                  {/* <img
-                    alt="..."
-                    src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80"                    
-                    className="w-full align-middle rounded-t-lg"
-                  /> */}
                   <Player
                     src='/img/truck.json'
                     className="player"
@@ -237,17 +222,8 @@ export default function Landing() {
           <div className="container mx-auto px-4">
             <div className="items-center flex flex-wrap">
               <div className="w-full md:w-4/12 ml-auto mr-auto px-4" data-aos="fade-right">
-                {/* <img
-                  alt="..."
-                  className="max-w-full rounded-lg shadow-lg"
-                  src="/img/family-business.jpg"
-                /> */}
-                <Player
-                    src='/img/family.json'
-                    className="player"
-                    loop
-                    autoplay
-                  />
+                <img src="/img/family-business.jpg">
+                </img>
               </div>
               <div className="w-full md:w-5/12 ml-auto mr-auto px-4" data-aos="fade-left">
                 <div className="md:pr-12">
@@ -309,7 +285,6 @@ export default function Landing() {
             </div>
           </div>
         </section>
-
         <section className="pt-20 pb-48">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-center text-center mb-24">
@@ -321,42 +296,42 @@ export default function Landing() {
               </div>
             </div>
             <div className="flex flex-wrap">
-              <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+              {/* <Carousel /> */}
+              {/* <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
                 <div className="px-6">
-                  <img
-                    alt="..."
-                    src="/img/patronal.jpg"
-                    className="shadow-lg mx-auto max-w-600-px"
-                  />
-                  <div className="pt-6 text-center">
-                    <h5 className="text-m font-bold">FEDERACION PATRONAL</h5>
-                    <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
-                    En el año 1921 abría sus puertas FEDERACIÓN PATRONAL C.S.L. iniciando sus actividades con un objetivo concreto: brindar cobertura al personal obrero de las empresas que administraban sus fundadores
-                    </p>
-                    <div className="mt-6">
-                      {/* <button
-                        className="bg-lightBlue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-twitter"></i>
-                      </button> */}
-                      {/* <button
-                        className="bg-lightBlue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-facebook-f"></i>
-                      </button> */}
-                      <button
-                        className="bg-lightBlue-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-dribbble"></i>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+                
+                      <Carousel /> */}
+                        {/* <img
+                          alt="..."
+                          src="/img/patronal.jpg"
+                          className="shadow-lg mx-auto max-w-600-px"
+                        /> */}
+                        {/* <div className="pt-6 text-center">
+                          <h5 className="text-m font-bold">FEDERACION PATRONAL</h5>
+                          <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
+                          En el año 1921 abría sus puertas FEDERACIÓN PATRONAL C.S.L. iniciando sus actividades con un objetivo concreto: brindar cobertura al personal obrero de las empresas que administraban sus fundadores
+                          </p>
+                          <div className="mt-6">
+
+                            <button
+                              className="bg-lightBlue-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                              type="button"
+                            >
+                              <i className="fab fa-dribbble"></i>
+                            </button>
+                          </div>
+                        </div> */}
+                        <div className="w-full flex justify-center">
+                          <div className="w-full md:w-8/12 lg:w-6/12 lg:mb-0 mb-12 px-4">
+                            <div className="px-6 flex justify-center items-center h-64">
+                              <Carousel />
+                            </div>
+                          </div>
+                        </div>
+                    
+                  {/* </div>
+                </div> */}
+              {/* <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
                 <div className="px-6">
                   <img
                     alt="..."
@@ -371,18 +346,6 @@ export default function Landing() {
                     y soluciones a nuestros clientes.
                     </p>
                     <div className="mt-6">
-                      {/* <button
-                        className="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-google"></i>
-                      </button>
-                      <button
-                        className="bg-lightBlue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-facebook-f"></i>
-                      </button> */}
                       <button
                         className="bg-lightBlue-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                         type="button"
@@ -392,8 +355,8 @@ export default function Landing() {
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+              </div> */}
+              {/* <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
                 <div className="px-6">
                   <img
                     alt="..."
@@ -408,24 +371,6 @@ export default function Landing() {
                     Provincia de Buenos Aires y una de las más importantes de la Argentina.
                     </p>
                     <div className="mt-6">
-                      {/* <button
-                        className="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-google"></i>
-                      </button>
-                      <button
-                        className="bg-lightBlue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-twitter"></i>
-                      </button>
-                      <button
-                        className="bg-blueGray-700 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-instagram"></i>
-                      </button> */}
                       <button
                         className="bg-lightBlue-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                         type="button"
@@ -435,8 +380,8 @@ export default function Landing() {
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+              </div> */}
+              {/* <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
                 <div className="px-6">
                   <img
                     alt="..."
@@ -451,30 +396,6 @@ export default function Landing() {
                     calidad prestacional y calidad médica superior.
                     </p>
                     <div className="mt-6">
-                      {/* <button
-                        className="bg-pink-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-dribbble"></i>
-                      </button>
-                      <button
-                        className="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-google"></i>
-                      </button>
-                      <button
-                        className="bg-lightBlue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-twitter"></i>
-                      </button>
-                      <button
-                        className="bg-blueGray-700 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-instagram"></i>
-                      </button> */}
                       <button
                         className="bg-lightBlue-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                         type="button"
@@ -484,7 +405,7 @@ export default function Landing() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
@@ -588,19 +509,7 @@ export default function Landing() {
                 <p className="mt-2 mb-4 text-blueGray-400">
                 Lo ayudamos a elegir la mejor compañía para lograr el cumplimiento de la obligación legal así como la incorporación de los beneficios que generen identificación y satisfacción de sus empleados.
                 </p>
-              </div>
-              {/* <div className="w-full lg:w-3/12 px-4 text-center">
-                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
-                  <i className="fas fa-lightbulb text-xl"></i>
-                </div>
-                <h5 className="text-xl mt-5 font-semibold text-white">
-                Automotores
-                </h5>
-                <p className="mt-2 mb-4 text-blueGray-400">
-                El seguro más completo para tu auto. Con Todo Riesgo tenés todas las coberturas en una sola póliza. La mejor opción sin dudas.
-                </p>
-              </div> */}
-              
+              </div>            
             </div>
           </div>
         </section>
