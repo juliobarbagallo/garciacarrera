@@ -130,7 +130,8 @@ export default function Landing() {
                 </div>
               </div>
 
-              <div className="pt-6 w-full md:w-4/12 px-4 text-center" data-aos="fade-up">              
+              <div className="pt-6 w-full md:w-4/12 px-4 text-center" data-aos="fade-up">
+              
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-4 py-5 flex-auto">
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400">
@@ -147,9 +148,10 @@ export default function Landing() {
                   </div>
                 </div>
               </div>
-            </div>            
+            </div>
+
+            <div className="flex flex-wrap items-center mt-32">
               <div className="w-full md:w-5/12 px-4 mr-auto ml-auto" data-aos="fade-right">
-              <div className="w-full md:w-5/12 px-4 mr-auto ml-auto">
                 <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
                   <MdOutlineHomeRepairService style={{ fontSize: '2.5rem', color: 'blue' }} />
                 </div>
@@ -165,7 +167,7 @@ export default function Landing() {
                 </p>
               </div>
 
-              <div className="w-full md:w-4/12 px-4 mr-auto ml-auto" data-aos="fade-left">              
+              <div className="w-full md:w-4/12 px-4 mr-auto ml-auto" data-aos="fade-left">
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg " style={{ backgroundColor: "#094988" }}>
                   <Player
                     src='/img/truck.json'
