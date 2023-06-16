@@ -9,6 +9,8 @@ import { FloatingWhatsApp } from 'react-floating-whatsapp'
 import avatarImg from '../public/img/gc.png'
 import logo from '../public/img/garciacarrera-logo.png'
 import { Player } from '@lottiefiles/react-lottie-player';
+import AutoplaySlider from "components/Carousel/AutoplaySlider";
+
 import Link from "next/link";
 
 import AOS from 'aos';
@@ -19,6 +21,8 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Navbar from "components/Navbars/AuthNavbar.js";
 import Footer from "components/Footers/Footer.js";
 import Carousel from "components/Carousel/Carousel";
+
+
 
 export default function Landing() {
   useEffect(() => {
@@ -31,7 +35,7 @@ export default function Landing() {
   });
   
   return (
-    <>
+    <div className="w-screen">
     <div>
       <img src={logo.src} alt="Garcia Carrera logo" />
     </div>
@@ -50,7 +54,7 @@ export default function Landing() {
               className="w-full h-full absolute opacity-75 bg-black"
             ></span>
           </div>
-          <div className="container relative mx-auto" data-aos="fade-in">
+          <div className="container relative mx-auto" data-aos="fade-in">          
             <div className="items-center flex flex-wrap">
               <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
               <div className="pr-12">
@@ -90,7 +94,7 @@ export default function Landing() {
         <section className="pb-20 bg-blueGray-200 -mt-24">
           <div className="container mx-auto px-4" >
             <div className="flex flex-wrap">
-              <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center" data-aos="fade-right">
+              <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center" data-aos="fade-up">              
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-4 py-5 flex-auto">
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
@@ -107,7 +111,7 @@ export default function Landing() {
                 </div>
               </div>
 
-              <div className="w-full md:w-4/12 px-4 text-center" data-aos="fade-down">
+              <div className="w-full md:w-4/12 px-4 text-center" data-aos="fade-down">              
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-4 py-5 flex-auto">
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-lightBlue-400">
@@ -126,7 +130,7 @@ export default function Landing() {
                 </div>
               </div>
 
-              <div className="pt-6 w-full md:w-4/12 px-4 text-center" data-aos="fade-left">
+              <div className="pt-6 w-full md:w-4/12 px-4 text-center" data-aos="fade-up">              
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-4 py-5 flex-auto">
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400">
@@ -143,10 +147,9 @@ export default function Landing() {
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div className="flex flex-wrap items-center mt-32">
+            </div>            
               <div className="w-full md:w-5/12 px-4 mr-auto ml-auto" data-aos="fade-right">
+              <div className="w-full md:w-5/12 px-4 mr-auto ml-auto">
                 <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
                   <MdOutlineHomeRepairService style={{ fontSize: '2.5rem', color: 'blue' }} />
                 </div>
@@ -162,7 +165,7 @@ export default function Landing() {
                 </p>
               </div>
 
-              <div className="w-full md:w-4/12 px-4 mr-auto ml-auto" data-aos="fade-left">
+              <div className="w-full md:w-4/12 px-4 mr-auto ml-auto" data-aos="fade-left">              
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg " style={{ backgroundColor: "#094988" }}>
                   <Player
                     src='/img/truck.json'
@@ -221,11 +224,11 @@ export default function Landing() {
 
           <div className="container mx-auto px-4">
             <div className="items-center flex flex-wrap">
-              <div className="w-full md:w-4/12 ml-auto mr-auto px-4" data-aos="fade-right">
+              <div className="w-full md:w-4/12 ml-auto mr-auto px-4" data-aos="fade-right">              
                 <img src="/img/family-business.jpg">
                 </img>
               </div>
-              <div className="w-full md:w-5/12 ml-auto mr-auto px-4" data-aos="fade-left">
+              <div className="w-full md:w-5/12 ml-auto mr-auto px-4" data-aos="fade-left">              
                 <div className="md:pr-12">
                   <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-blueGray-200">
                     <MdFamilyRestroom style={{ fontSize: '2.5rem', color: 'blue' }}/>
@@ -296,17 +299,20 @@ export default function Landing() {
               </div>
             </div>
             <div className="flex flex-wrap">
+
+
+              {/* <AutoplaySlider /> */}
               {/* <Carousel /> */}
-              {/* <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+              <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
                 <div className="px-6">
                 
-                      <Carousel /> */}
-                        {/* <img
+                      {/* <Carousel /> */}
+                        <img
                           alt="..."
                           src="/img/patronal.jpg"
                           className="shadow-lg mx-auto max-w-600-px"
-                        /> */}
-                        {/* <div className="pt-6 text-center">
+                        />
+                        <div className="pt-6 text-center">
                           <h5 className="text-m font-bold">FEDERACION PATRONAL</h5>
                           <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
                           En el año 1921 abría sus puertas FEDERACIÓN PATRONAL C.S.L. iniciando sus actividades con un objetivo concreto: brindar cobertura al personal obrero de las empresas que administraban sus fundadores
@@ -320,18 +326,19 @@ export default function Landing() {
                               <i className="fab fa-dribbble"></i>
                             </button>
                           </div>
-                        </div> */}
-                        <div className="w-full flex justify-center">
-  <div className="w-full md:w-10/12 lg:w-8/12 lg:mb-0 mb-12 px-4">
-    <div className="px-6 flex justify-center items-center h-96">
-                              <Carousel />
-                            </div>
+                        </div>
+                      
+                      {/* <div className="w-full lg:w-8/12 mx-auto px-4">
+                        <div className="lg:h-96">                          
+                          <div className="h-60 md:h-60 lg:h-60">
+                            <Carousel />
                           </div>
                         </div>
+                      </div> */}
                     
-                  {/* </div>
-                </div> */}
-              {/* <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+                  </div>
+                </div>
+              <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
                 <div className="px-6">
                   <img
                     alt="..."
@@ -355,8 +362,8 @@ export default function Landing() {
                     </div>
                   </div>
                 </div>
-              </div> */}
-              {/* <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+              </div>
+              <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
                 <div className="px-6">
                   <img
                     alt="..."
@@ -380,8 +387,8 @@ export default function Landing() {
                     </div>
                   </div>
                 </div>
-              </div> */}
-              {/* <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+              </div>
+              <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
                 <div className="px-6">
                   <img
                     alt="..."
@@ -405,7 +412,7 @@ export default function Landing() {
                     </div>
                   </div>
                 </div>
-              </div> */}
+              </div>
             </div>
           </div>
         </section>
@@ -445,7 +452,7 @@ export default function Landing() {
             </div>
             <div className="flex flex-wrap mt-12 justify-center">
             <div className="w-full lg:w-3/12 px-4 text-center">
-                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center" data-aos="flip-up">
+                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center" data-aos="flip-up">                
                   <BsFillCarFrontFill />
                 </div>
                 <h6 className="text-xl mt-5 font-semibold text-white">
@@ -456,7 +463,7 @@ export default function Landing() {
                 </p>
               </div>
               <div className="w-full lg:w-3/12 px-4 text-center">
-                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center" data-aos="flip-up">
+                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center" data-aos="flip-up">                
                   <BsFillPersonCheckFill />
                 </div>
                 <h6 className="text-xl mt-5 font-semibold text-white">
@@ -467,7 +474,7 @@ export default function Landing() {
                 </p>
               </div>
               <div className="w-full lg:w-3/12 px-4 text-center">
-                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center" data-aos="flip-up">
+                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center" data-aos="flip-up">                
                   <BsFillBuildingFill />
                 </div>
                 <h5 className="text-xl mt-5 font-semibold text-white">
@@ -478,7 +485,7 @@ export default function Landing() {
                 </p>
               </div>
               <div className="w-full lg:w-3/12 px-4 text-center">
-                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center" data-aos="flip-up">
+                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center" data-aos="flip-up">                
                   <BsFillBriefcaseFill />
                 </div>
                 <h5 className="text-xl mt-5 font-semibold text-white">
@@ -489,7 +496,7 @@ export default function Landing() {
                 </p>
               </div>
               <div className="w-full lg:w-3/12 px-4 text-center">
-                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center" data-aos="flip-up">
+                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center" data-aos="flip-up">                
                   <GiFarmTractor />
                 </div>
                 <h5 className="text-xl mt-5 font-semibold text-white">
@@ -500,7 +507,7 @@ export default function Landing() {
                 </p>
               </div>
               <div className="w-full lg:w-3/12 px-4 text-center">
-                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center" data-aos="flip-up">
+                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center" data-aos="flip-up">                
                   <VscLaw />
                 </div>
                 <h5 className="text-xl mt-5 font-semibold text-white">
@@ -582,11 +589,12 @@ export default function Landing() {
           </div>
         </section>
         <FloatingWhatsApp {...{accountName: "A. Garcia Carrera e Hijos SA", phoneNumber: "1135612774",
-         avatar:avatarImg.src, statusMessage:"Disponible Lun a Vier de 09:00 a 18:00",
-         chatMessage: "Hola, mi nombre es Garcia Carrera.",
-         placeholder: "Mensaje"}}/>
+          avatar:avatarImg.src, statusMessage:"Disponible Lun a Vier de 09:00 a 18:00",
+          chatMessage: "Hola, mi nombre es Garcia Carrera.",
+          placeholder: "Mensaje"}}
+         />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
