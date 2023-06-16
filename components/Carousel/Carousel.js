@@ -7,6 +7,8 @@ export default () => (
             emulateTouch 
             infiniteLoop
             // width={'50%'}
+            dynamicHeight={false}
+            showStatus={false}
     >
     <div>
       <img
