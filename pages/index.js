@@ -24,7 +24,6 @@ import Footer from "components/Footers/Footer.js";
 import Carousel from "components/Carousel/Carousel";
 
 
-
 export default function Landing() {
   useEffect(() => {
     AOS.init({
@@ -34,8 +33,6 @@ export default function Landing() {
     });
     AOS.refresh();
   });
-
-  console.log("ready")
   
   return (
     <div className="w-screen">
