@@ -9,9 +9,9 @@ import { FloatingWhatsApp } from 'react-floating-whatsapp'
 import avatarImg from '../public/img/gc.png'
 import logo from '../public/img/garciacarrera-logo.png'
 import { Player } from '@lottiefiles/react-lottie-player';
-import AutoplaySlider from "components/Carousel/AutoplaySlider";
+// import AutoplaySlider from "components/Carousel/AutoplaySlider";
 
-import Link from "next/link";
+// import Link from "next/link";
 
 // animations
 import AOS from 'aos';
@@ -34,6 +34,8 @@ export default function Landing() {
     });
     AOS.refresh();
   });
+
+  console.log("ready")
   
   return (
     <div className="w-screen">
