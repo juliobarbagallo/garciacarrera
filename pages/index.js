@@ -13,6 +13,7 @@ import AutoplaySlider from "components/Carousel/AutoplaySlider";
 
 import Link from "next/link";
 
+// animations
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
