@@ -293,7 +293,7 @@ export default function Landing() {
               <div className="w-full lg:w-6/12 px-4">
                 <h2 className="text-4xl font-semibold">Nos respaldan</h2>
                 {/* <p className="text-lg leading-relaxed m-4 text-blueGray-500">
-                  Las empresas #1.
+                  Las empresas numero#1.
                 </p> */}
               </div>
             </div>
