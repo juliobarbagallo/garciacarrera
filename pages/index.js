@@ -328,14 +328,14 @@ export default function Landing() {
                         <img
                           alt="..."
                           src="/img/patronal.jpg"
-                          className="shadow-lg mx-auto max-w-600-px"
+                          className="shadow-lg mx-auto max-w-600-px mt-15"
                         />
-                        <div className="pt-6 text-center">
+                        {/* <div className="pt-6 text-center"> */}
                           {/* <h5 className="text-m font-bold">FEDERACION PATRONAL</h5> */}
                           {/* <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
                           En el año 1921 abría sus puertas FEDERACIÓN PATRONAL C.S.L. iniciando sus actividades con un objetivo concreto: brindar cobertura al personal obrero de las empresas que administraban sus fundadores
                           </p> */}
-                          <div className="mt-6">
+                          {/* <div className="mt-6"> */}
 
                             {/* <button
                               className="bg-lightBlue-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
@@ -343,8 +343,8 @@ export default function Landing() {
                             >
                               <i className="fab fa-dribbble"></i>
                             </button> */}
-                          </div>
-                        </div>
+                          {/* </div> */}
+                        {/* </div> */}
                   </div>
                 </div>
                 <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
@@ -353,13 +353,14 @@ export default function Landing() {
                           alt="..."
                           src="/img/Sancorseguros.jpg"
                           className="shadow-lg mx-auto max-w-600-px"
+                          style={{ marginBottom: '15px' }}
                         />
-                        <div className="pt-6 text-center">
+                        {/* <div className="pt-6 text-center"> */}
                           {/* <h5 className="text-m font-bold">SANCOR</h5> */}
                           {/* <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
                           En el año 1921 abría sus puertas FEDERACIÓN PATRONAL C.S.L. iniciando sus actividades con un objetivo concreto: brindar cobertura al personal obrero de las empresas que administraban sus fundadores
                           </p> */}
-                          <div className="mt-6">
+                          {/* <div className="mt-6"> */}
 
                             {/* <button
                               className="bg-lightBlue-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
@@ -367,8 +368,8 @@ export default function Landing() {
                             >
                               <i className="fab fa-dribbble"></i>
                             </button> */}
-                          </div>
-                        </div>
+                          {/* </div> */}
+                        {/* </div> */}
                   </div>
                 </div>
                 <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
@@ -377,23 +378,24 @@ export default function Landing() {
                     alt="..."
                     src="/img/experta.jpg"
                     className="shadow-lg mx-auto max-w-600-px"
+                    style={{ marginTop: '15px' }}
                   />
-                  <div className="pt-6 text-center">
+                  {/* <div className="pt-6 text-center"> */}
                     {/* <h5 className="text-m font-bold">EXPERTA</h5> */}
                     {/* <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
                     Nuestra mision es ofrecer un servicio de alta calidad, incorporando sostenidamente capacidades, habilidades y 
                     tecnologías que permitan establecer un claro liderazgo en la cobertura de riesgos laborales, otorgando seguridad 
                     y soluciones a nuestros clientes.
                     </p> */}
-                    <div className="mt-6">
+                    {/* <div className="mt-6"> */}
                       {/* <button
                         className="bg-lightBlue-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                         type="button"
                       >
                         <i className="fab fa-dribbble"></i>
                       </button> */}
-                    </div>
-                  </div>
+                    {/* </div> */}
+                  {/* </div> */}
                 </div>
               </div>
                 <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
@@ -402,13 +404,14 @@ export default function Landing() {
                           alt="..."
                           src="/img/zurich-seguros.jpg"
                           className="shadow-lg mx-auto max-w-600-px"
+                          style={{ marginTop: '40px' }}
                         />
-                        <div className="pt-6 text-center">
+                        {/* <div className="pt-6 text-center"> */}
                           {/* <h5 className="text-m font-bold">ZURICH</h5> */}
                           {/* <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
                           En el año 1921 abría sus puertas FEDERACIÓN PATRONAL C.S.L. iniciando sus actividades con un objetivo concreto: brindar cobertura al personal obrero de las empresas que administraban sus fundadores
                           </p> */}
-                          <div className="mt-6">
+                          {/* <div className="mt-6"> */}
 
                             {/* <button
                               className="bg-lightBlue-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
@@ -416,8 +419,8 @@ export default function Landing() {
                             >
                               <i className="fab fa-dribbble"></i>
                             </button> */}
-                          </div>
-                        </div>
+                          {/* </div>
+                        </div> */}
                   </div>
                 </div>
                 <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
@@ -426,23 +429,24 @@ export default function Landing() {
                       alt="..."
                       src="/img/allianz.png"
                       className="shadow-lg mx-auto max-w-600-px"
+                      style={{ marginTop: '40px' }}
                     />
-                    <div className="pt-6 text-center">
+                    {/* <div className="pt-6 text-center"> */}
                       {/* <h5 className="text-m font-bold">ALLIANZ</h5> */}
                       {/* <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
                       Cuidamos la salud de tu trabajo, porque brindamos un respaldo real en el ámbito laboral, una cobertura 
                       integral e interdisciplinaria, con prevención - capacitación y gestión -, asesoramiento técnico y legal, 
                       calidad prestacional y calidad médica superior.
                       </p> */}
-                      <div className="mt-6">
+                      {/* <div className="mt-6"> */}
                         {/* <button
                           className="bg-lightBlue-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                           type="button"
                         >
                           <i className="fab fa-dribbble"></i>
                         </button> */}
-                      </div>
-                    </div>
+                      {/* </div>
+                    </div> */}
                   </div>
                 </div>
                 <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
@@ -451,23 +455,24 @@ export default function Landing() {
                       alt="..."
                       src="/img/san_cristobal.png"
                       className="shadow-lg mx-auto max-w-600-px"
+                      style={{ marginBottom: '30px' }}
                     />
-                    <div className="pt-6 text-center">
+                    {/* <div className="pt-6 text-center"> */}
                       {/* <h5 className="text-m font-bold">SAN CRISTOBAL</h5> */}
                       {/* <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
                       Cuidamos la salud de tu trabajo, porque brindamos un respaldo real en el ámbito laboral, una cobertura 
                       integral e interdisciplinaria, con prevención - capacitación y gestión -, asesoramiento técnico y legal, 
                       calidad prestacional y calidad médica superior.
                       </p> */}
-                      <div className="mt-6">
+                      {/* <div className="mt-6"> */}
                         {/* <button
                           className="bg-lightBlue-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                           type="button"
                         >
                           <i className="fab fa-dribbble"></i>
                         </button> */}
-                      </div>
-                    </div>
+                      {/* </div>
+                    </div> */}
                   </div>
                 </div>
                 <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
@@ -477,22 +482,22 @@ export default function Landing() {
                       src="/img/nacion.png"
                       className="shadow-lg mx-auto max-w-600-px"
                     />
-                    <div className="pt-6 text-center">
+                    {/* <div className="pt-6 text-center"> */}
                       {/* <h5 className="text-m font-bold">NACIÓN</h5> */}
                       {/* <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
                       Cuidamos la salud de tu trabajo, porque brindamos un respaldo real en el ámbito laboral, una cobertura 
                       integral e interdisciplinaria, con prevención - capacitación y gestión -, asesoramiento técnico y legal, 
                       calidad prestacional y calidad médica superior.
                       </p> */}
-                      <div className="mt-6">
+                      {/* <div className="mt-6"> */}
                         {/* <button
                           className="bg-lightBlue-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                           type="button"
                         >
                           <i className="fab fa-dribbble"></i>
                         </button> */}
-                      </div>
-                    </div>
+                      {/* </div>
+                    </div> */}
                   </div>
                 </div>
                 <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
@@ -502,47 +507,22 @@ export default function Landing() {
                       src="/img/ma.png"
                       className="shadow-lg mx-auto max-w-600-px"
                     />
-                    <div className="pt-6 text-center">
+                    {/* <div className="pt-6 text-center"> */}
                       {/* <h5 className="text-m font-bold">MERCANTIL ANDINA</h5> */}
                       {/* <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
                       Cuidamos la salud de tu trabajo, porque brindamos un respaldo real en el ámbito laboral, una cobertura 
                       integral e interdisciplinaria, con prevención - capacitación y gestión -, asesoramiento técnico y legal, 
                       calidad prestacional y calidad médica superior.
                       </p> */}
-                      <div className="mt-6">
+                      {/* <div className="mt-6"> */}
                         {/* <button
                           className="bg-lightBlue-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                           type="button"
                         >
                           <i className="fab fa-dribbble"></i>
                         </button> */}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-                  <div className="px-6">
-                    <img
-                      alt="..."
-                      src="/img/prevencion.png"
-                      className="shadow-lg mx-auto max-w-600-px"
-                    />
-                    <div className="pt-6 text-center">
-                      {/* <h5 className="text-m font-bold">PREVENCIÓN</h5> */}
-                      {/* <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
-                      Cuidamos la salud de tu trabajo, porque brindamos un respaldo real en el ámbito laboral, una cobertura 
-                      integral e interdisciplinaria, con prevención - capacitación y gestión -, asesoramiento técnico y legal, 
-                      calidad prestacional y calidad médica superior.
-                      </p> */}
-                      <div className="mt-6">
-                        {/* <button
-                          className="bg-lightBlue-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                          type="button"
-                        >
-                          <i className="fab fa-dribbble"></i>
-                        </button> */}
-                      </div>
-                    </div>
+                      {/* </div>
+                    </div> */}
                   </div>
                 </div>
                 <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
@@ -551,23 +531,24 @@ export default function Landing() {
                       alt="..."
                       src="/img/provincia-art.jpg"
                       className="shadow-lg mx-auto max-w-600-px"
+                      style={{ marginTop: '40px' }}
                     />
-                    <div className="pt-6 text-center">
+                    {/* <div className="pt-6 text-center"> */}
                       {/* <h5 className="text-m font-bold">PROVINCIA ART</h5> */}
                       {/* <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
                       Cuidamos la salud de tu trabajo, porque brindamos un respaldo real en el ámbito laboral, una cobertura 
                       integral e interdisciplinaria, con prevención - capacitación y gestión -, asesoramiento técnico y legal, 
                       calidad prestacional y calidad médica superior.
                       </p> */}
-                      <div className="mt-6">
+                      {/* <div className="mt-6"> */}
                         {/* <button
                           className="bg-lightBlue-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                           type="button"
                         >
                           <i className="fab fa-dribbble"></i>
                         </button> */}
-                      </div>
-                    </div>
+                      {/* </div>
+                    </div> */}
                   </div>
                 </div>
             </div>

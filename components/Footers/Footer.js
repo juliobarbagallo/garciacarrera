@@ -1,5 +1,6 @@
 import React from "react";
-import { FaWhatsapp, FaInstagram } from "react-icons/fa";
+import Image from 'next/image'
+import { FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -52,8 +53,22 @@ export default function Footer() {
                     window.open(url, '_blank');
                   }}
                 >
-                  <FaInstagram style={{ fontSize: '2rem', }} />
+                  {/* <FaInstagram style={{ fontSize: '2rem', }} /> */}
+                  <Image
+                      src="/img/instagram.png"
+                      width={500}
+                      height={500}
+                      alt="Picture of the author"
+                    />
                 </button>
+
+                {/* <Image
+                      src="/img/instagram.png"
+                      width={500}
+                      height={500}
+                      alt="Picture of the author"
+                    /> */}
+
                 {/* <button
                   className="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                   type="button"
