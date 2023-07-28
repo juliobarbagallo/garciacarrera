@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { GiChampions, GiRelationshipBounds, GiFarmTractor } from "react-icons/gi";
 import { TbRulerMeasure } from "react-icons/tb";
 import { MdOutlineHomeRepairService, MdFamilyRestroom } from "react-icons/md";
@@ -14,6 +14,8 @@ import { Player } from '@lottiefiles/react-lottie-player';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+import emailjs from '@emailjs/browser';
+
 // components
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Navbar from "components/Navbars/AuthNavbar.js";
@@ -26,11 +28,34 @@ export default function Landing() {
     AOS.init({
       delay: 200,
       duration: 1200,
-      once: false, 
+      once: false,
     });
     AOS.refresh();
   });
-  
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        process.env.SERVICE_ID,
+        process.env.TEMPLATE_ID,
+        form.current,
+        process.env.PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          console.log('message sent successfully...');
+          console.log(result.text);
+          form.current.reset();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <div className="w-screen">
     <div>
@@ -51,7 +76,7 @@ export default function Landing() {
               className="w-full h-full absolute opacity-75 bg-black"
             ></span>
           </div>
-          <div className="container relative mx-auto" data-aos="fade-in">          
+          <div className="container relative mx-auto" data-aos="fade-in">
             <div className="items-center flex flex-wrap">
               <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
               <div className="pr-12">
@@ -91,7 +116,7 @@ export default function Landing() {
         <section className="pb-20 bg-blueGray-200 -mt-24">
           <div className="container mx-auto px-4" >
             <div className="flex flex-wrap">
-              <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center" data-aos="fade-up">              
+              <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center" data-aos="fade-up">
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-4 py-5 flex-auto">
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
@@ -99,16 +124,16 @@ export default function Landing() {
                     </div>
                     <h6 className="text-xl font-semibold">30 años de experiencia construyendo confianza</h6>
                     <p className="mt-2 mb-4 text-blueGray-500">
-                    Construimos confianza a lo largo de 30 años de experiencia en el sector de seguros. Nuestra dedicación constante 
-                    a proporcionar soluciones personalizadas y servicio excepcional nos ha permitido establecer relaciones sólidas 
-                    con nuestros clientes. Confíe en nuestra experiencia y disfrute de la 
+                    Construimos confianza a lo largo de 30 años de experiencia en el sector de seguros. Nuestra dedicación constante
+                    a proporcionar soluciones personalizadas y servicio excepcional nos ha permitido establecer relaciones sólidas
+                    con nuestros clientes. Confíe en nuestra experiencia y disfrute de la
                     tranquilidad de una compañía comprometida con su seguridad.
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="w-full md:w-4/12 px-4 text-center" data-aos="fade-down">              
+              <div className="w-full md:w-4/12 px-4 text-center" data-aos="fade-down">
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-4 py-5 flex-auto">
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-lightBlue-400">
@@ -116,11 +141,11 @@ export default function Landing() {
                     </div>
                     <h6 className="text-xl font-semibold">Trabajamos con compañias lideres</h6>
                     <p className="mt-2 mb-4 text-blueGray-500">
-                    Trabajamos en estrecha colaboración con compañías líderes en la industria para ofrecer a nuestros clientes 
-                    soluciones de seguros de la más alta calidad. Nuestro compromiso con la excelencia nos impulsa a asociarnos 
-                    con las principales aseguradoras, lo que nos permite brindar una amplia gama de opciones y coberturas 
-                    adaptadas a las necesidades individuales de nuestros clientes. Al trabajar con estas compañías líderes, 
-                    podemos garantizar la confiabilidad, estabilidad y respaldo necesarios para proteger lo que más valoran 
+                    Trabajamos en estrecha colaboración con compañías líderes en la industria para ofrecer a nuestros clientes
+                    soluciones de seguros de la más alta calidad. Nuestro compromiso con la excelencia nos impulsa a asociarnos
+                    con las principales aseguradoras, lo que nos permite brindar una amplia gama de opciones y coberturas
+                    adaptadas a las necesidades individuales de nuestros clientes. Al trabajar con estas compañías líderes,
+                    podemos garantizar la confiabilidad, estabilidad y respaldo necesarios para proteger lo que más valoran
                     nuestros asegurados.
                     </p>
                   </div>
@@ -128,7 +153,7 @@ export default function Landing() {
               </div>
 
               <div className="pt-6 w-full md:w-4/12 px-4 text-center" data-aos="fade-up">
-              
+
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-4 py-5 flex-auto">
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400">
@@ -136,10 +161,10 @@ export default function Landing() {
                     </div>
                     <h6 className="text-xl font-semibold">Servicios a la medida de tus necesidades</h6>
                     <p className="mt-2 mb-4 text-blueGray-500">
-                    Reconocemos que cada cliente es único y tiene requisitos específicos cuando se trata de seguros. Es por eso 
-                    que nos esforzamos por adaptar nuestros servicios para brindarte soluciones personalizadas que se ajusten 
-                    perfectamente a tu situación. Trabajamos de cerca para entender tus necesidades y diseñar un plan que te brinde la tranquilidad y 
-                    la seguridad que mereces. Obtendrás un servicio excepcional y una atención individualizada para satisfacer tus 
+                    Reconocemos que cada cliente es único y tiene requisitos específicos cuando se trata de seguros. Es por eso
+                    que nos esforzamos por adaptar nuestros servicios para brindarte soluciones personalizadas que se ajusten
+                    perfectamente a tu situación. Trabajamos de cerca para entender tus necesidades y diseñar un plan que te brinde la tranquilidad y
+                    la seguridad que mereces. Obtendrás un servicio excepcional y una atención individualizada para satisfacer tus
                     requerimientos específicos.
                     </p>
                   </div>
@@ -156,10 +181,10 @@ export default function Landing() {
                 Coberturas
                 </h3>
                 <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-800">
-                Comprendemos que al igual que las personas, cada empresa es única. Nuestro desafío es entender a fondo tu negocio para ofrecerte un servicio a 
-                medida. Nos tomamos el tiempo necesario para conocer tus necesidades y desafíos específicos, lo que nos permite diseñar soluciones de seguros 
-                personalizadas que se adapten perfectamente a tu empresa. Ya sea que requieras protección para tus activos, responsabilidad civil, seguro de empleados 
-                o cualquier otra cobertura, nuestro enfoque "Taylor Made" garantiza que obtengas la protección adecuada y un servicio excepcional que respalde el éxito 
+                Comprendemos que al igual que las personas, cada empresa es única. Nuestro desafío es entender a fondo tu negocio para ofrecerte un servicio a
+                medida. Nos tomamos el tiempo necesario para conocer tus necesidades y desafíos específicos, lo que nos permite diseñar soluciones de seguros
+                personalizadas que se adapten perfectamente a tu empresa. Ya sea que requieras protección para tus activos, responsabilidad civil, seguro de empleados
+                o cualquier otra cobertura, nuestro enfoque "Taylor Made" garantiza que obtengas la protección adecuada y un servicio excepcional que respalde el éxito
                 continuo de tu negocio. Confía en nosotros para adaptarnos a tu empresa y brindarte la tranquilidad y seguridad que necesitas para avanzar con confianza en el mercado.
                 </p>
               </div>
@@ -178,7 +203,7 @@ export default function Landing() {
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 583 95"
                       className="absolute left-0 w-full block h-95-px -top-94-px"
-                      
+
                     >
                       <polygon
                         points="-30,95 583,95 583,65"
@@ -190,7 +215,7 @@ export default function Landing() {
                       Taylor made
                     </h4>
                     <p className="text-md font-light mt-2 text-white">
-                    Asi como las personas, cada empresa es distinta. Nuestro desafio es entender su negocio para 
+                    Asi como las personas, cada empresa es distinta. Nuestro desafio es entender su negocio para
                     brindarles un servicio taylor made.
                     </p>
                   </blockquote>
@@ -223,19 +248,19 @@ export default function Landing() {
 
           <div className="container mx-auto px-4">
             <div className="items-center flex flex-wrap">
-              <div className="w-full md:w-4/12 ml-auto mr-auto px-4" data-aos="fade-right">              
+              <div className="w-full md:w-4/12 ml-auto mr-auto px-4" data-aos="fade-right">
                 <img src="/img/family-business.jpg">
                 </img>
               </div>
-              <div className="w-full md:w-5/12 ml-auto mr-auto px-4" data-aos="fade-left">              
+              <div className="w-full md:w-5/12 ml-auto mr-auto px-4" data-aos="fade-left">
                 <div className="md:pr-12">
                   <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-blueGray-200">
                     <MdFamilyRestroom style={{ fontSize: '2.5rem', color: 'blue' }}/>
                   </div>
                   <h3 className="text-3xl font-semibold">Una empresa familiar</h3>
                   <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
-                  Somos una empresa familiar con raíces arraigadas en la pasión y el compromiso generacional. Nos distinguimos por nuestros valores fundamentales de 
-                  integridad, confianza y dedicación. Nos enorgullece ofrecer un enfoque cercano y personalizado, construyendo 
+                  Somos una empresa familiar con raíces arraigadas en la pasión y el compromiso generacional. Nos distinguimos por nuestros valores fundamentales de
+                  integridad, confianza y dedicación. Nos enorgullece ofrecer un enfoque cercano y personalizado, construyendo
                   relaciones a largo plazo basadas en la confianza mutua..
                   </p>
                   <ul className="list-none mt-6">
@@ -308,8 +333,8 @@ export default function Landing() {
                   <div className="pt-6 text-center">
                     {/* <h5 className="text-m font-bold">PROVINCIA SEGUROS</h5> */}
                     {/* <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
-                    Trabajamos para proteger el trabajo de los otros, respaldando a las empresas, los organismos y las instituciones que hacen al 
-                    crecimiento de nuestro país. Somos la Aseguradora de Riesgos del Trabajo del Grupo Provincia, n° 1 de la 
+                    Trabajamos para proteger el trabajo de los otros, respaldando a las empresas, los organismos y las instituciones que hacen al
+                    crecimiento de nuestro país. Somos la Aseguradora de Riesgos del Trabajo del Grupo Provincia, n° 1 de la
                     Provincia de Buenos Aires y una de las más importantes de la Argentina.
                     </p> */}
                     <div className="mt-6">
@@ -383,8 +408,8 @@ export default function Landing() {
                   {/* <div className="pt-6 text-center"> */}
                     {/* <h5 className="text-m font-bold">EXPERTA</h5> */}
                     {/* <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
-                    Nuestra mision es ofrecer un servicio de alta calidad, incorporando sostenidamente capacidades, habilidades y 
-                    tecnologías que permitan establecer un claro liderazgo en la cobertura de riesgos laborales, otorgando seguridad 
+                    Nuestra mision es ofrecer un servicio de alta calidad, incorporando sostenidamente capacidades, habilidades y
+                    tecnologías que permitan establecer un claro liderazgo en la cobertura de riesgos laborales, otorgando seguridad
                     y soluciones a nuestros clientes.
                     </p> */}
                     {/* <div className="mt-6"> */}
@@ -434,8 +459,8 @@ export default function Landing() {
                     {/* <div className="pt-6 text-center"> */}
                       {/* <h5 className="text-m font-bold">ALLIANZ</h5> */}
                       {/* <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
-                      Cuidamos la salud de tu trabajo, porque brindamos un respaldo real en el ámbito laboral, una cobertura 
-                      integral e interdisciplinaria, con prevención - capacitación y gestión -, asesoramiento técnico y legal, 
+                      Cuidamos la salud de tu trabajo, porque brindamos un respaldo real en el ámbito laboral, una cobertura
+                      integral e interdisciplinaria, con prevención - capacitación y gestión -, asesoramiento técnico y legal,
                       calidad prestacional y calidad médica superior.
                       </p> */}
                       {/* <div className="mt-6"> */}
@@ -460,8 +485,8 @@ export default function Landing() {
                     {/* <div className="pt-6 text-center"> */}
                       {/* <h5 className="text-m font-bold">SAN CRISTOBAL</h5> */}
                       {/* <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
-                      Cuidamos la salud de tu trabajo, porque brindamos un respaldo real en el ámbito laboral, una cobertura 
-                      integral e interdisciplinaria, con prevención - capacitación y gestión -, asesoramiento técnico y legal, 
+                      Cuidamos la salud de tu trabajo, porque brindamos un respaldo real en el ámbito laboral, una cobertura
+                      integral e interdisciplinaria, con prevención - capacitación y gestión -, asesoramiento técnico y legal,
                       calidad prestacional y calidad médica superior.
                       </p> */}
                       {/* <div className="mt-6"> */}
@@ -485,8 +510,8 @@ export default function Landing() {
                     {/* <div className="pt-6 text-center"> */}
                       {/* <h5 className="text-m font-bold">NACIÓN</h5> */}
                       {/* <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
-                      Cuidamos la salud de tu trabajo, porque brindamos un respaldo real en el ámbito laboral, una cobertura 
-                      integral e interdisciplinaria, con prevención - capacitación y gestión -, asesoramiento técnico y legal, 
+                      Cuidamos la salud de tu trabajo, porque brindamos un respaldo real en el ámbito laboral, una cobertura
+                      integral e interdisciplinaria, con prevención - capacitación y gestión -, asesoramiento técnico y legal,
                       calidad prestacional y calidad médica superior.
                       </p> */}
                       {/* <div className="mt-6"> */}
@@ -510,8 +535,8 @@ export default function Landing() {
                     {/* <div className="pt-6 text-center"> */}
                       {/* <h5 className="text-m font-bold">MERCANTIL ANDINA</h5> */}
                       {/* <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
-                      Cuidamos la salud de tu trabajo, porque brindamos un respaldo real en el ámbito laboral, una cobertura 
-                      integral e interdisciplinaria, con prevención - capacitación y gestión -, asesoramiento técnico y legal, 
+                      Cuidamos la salud de tu trabajo, porque brindamos un respaldo real en el ámbito laboral, una cobertura
+                      integral e interdisciplinaria, con prevención - capacitación y gestión -, asesoramiento técnico y legal,
                       calidad prestacional y calidad médica superior.
                       </p> */}
                       {/* <div className="mt-6"> */}
@@ -536,8 +561,8 @@ export default function Landing() {
                     {/* <div className="pt-6 text-center"> */}
                       {/* <h5 className="text-m font-bold">PROVINCIA ART</h5> */}
                       {/* <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
-                      Cuidamos la salud de tu trabajo, porque brindamos un respaldo real en el ámbito laboral, una cobertura 
-                      integral e interdisciplinaria, con prevención - capacitación y gestión -, asesoramiento técnico y legal, 
+                      Cuidamos la salud de tu trabajo, porque brindamos un respaldo real en el ámbito laboral, una cobertura
+                      integral e interdisciplinaria, con prevención - capacitación y gestión -, asesoramiento técnico y legal,
                       calidad prestacional y calidad médica superior.
                       </p> */}
                       {/* <div className="mt-6"> */}
@@ -590,7 +615,7 @@ export default function Landing() {
             </div>
             <div className="flex flex-wrap mt-12 justify-center">
             <div className="w-full lg:w-3/12 px-4 text-center">
-                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center" data-aos="flip-up">                
+                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center" data-aos="flip-up">
                   <BsFillCarFrontFill />
                 </div>
                 <h6 className="text-xl mt-5 font-semibold text-white">
@@ -601,7 +626,7 @@ export default function Landing() {
                 </p>
               </div>
               <div className="w-full lg:w-3/12 px-4 text-center">
-                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center" data-aos="flip-up">                
+                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center" data-aos="flip-up">
                   <BsFillPersonCheckFill />
                 </div>
                 <h6 className="text-xl mt-5 font-semibold text-white">
@@ -612,7 +637,7 @@ export default function Landing() {
                 </p>
               </div>
               <div className="w-full lg:w-3/12 px-4 text-center">
-                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center" data-aos="flip-up">                
+                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center" data-aos="flip-up">
                   <BsFillBuildingFill />
                 </div>
                 <h5 className="text-xl mt-5 font-semibold text-white">
@@ -623,7 +648,7 @@ export default function Landing() {
                 </p>
               </div>
               <div className="w-full lg:w-3/12 px-4 text-center">
-                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center" data-aos="flip-up">                
+                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center" data-aos="flip-up">
                   <BsFillBriefcaseFill />
                 </div>
                 <h5 className="text-xl mt-5 font-semibold text-white">
@@ -634,7 +659,7 @@ export default function Landing() {
                 </p>
               </div>
               <div className="w-full lg:w-3/12 px-4 text-center">
-                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center" data-aos="flip-up">                
+                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center" data-aos="flip-up">
                   <GiFarmTractor />
                 </div>
                 <h5 className="text-xl mt-5 font-semibold text-white">
@@ -645,7 +670,7 @@ export default function Landing() {
                 </p>
               </div>
               <div className="w-full lg:w-3/12 px-4 text-center">
-                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center" data-aos="flip-up">                
+                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center" data-aos="flip-up">
                   <VscLaw />
                 </div>
                 <h5 className="text-xl mt-5 font-semibold text-white">
@@ -654,77 +679,90 @@ export default function Landing() {
                 <p className="mt-2 mb-4 text-blueGray-400">
                 Lo ayudamos a elegir la mejor compañía para lograr el cumplimiento de la obligación legal así como la incorporación de los beneficios que generen identificación y satisfacción de sus empleados.
                 </p>
-              </div>            
+              </div>
             </div>
           </div>
         </section>
         <section className="relative block py-24 lg:pt-0 " style={{ backgroundColor: "#094988" }}>
-          <div className="container mx-auto px-4">
-            <div className="flex flex-wrap justify-center lg:-mt-64 -mt-48">
-              <div className="w-full lg:w-6/12 px-4">
-                <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200">
-                  <div className="flex-auto p-5 lg:p-10">
-                    <h4 className="text-2xl font-semibold">
-                      Pongase en contacto.
-                    </h4>
-                    <p className="leading-relaxed mt-1 mb-4 text-blueGray-500">
-                      Complete el siguiente formulario y nos estaremos comunicando a la brevedad.
-                    </p>
-                    <div className="relative w-full mb-3 mt-8">
-                      <label
-                        className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                        htmlFor="full-name"
-                      >
-                        Nombre Completo
-                      </label>
-                      <input
-                        type="text"
-                        className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                        placeholder="Nombre completo"
-                      />
-                    </div>
+          <form className='cf' ref={form} onSubmit={sendEmail}>
+            <div className="container mx-auto px-4">
+              <div className="flex flex-wrap justify-center lg:-mt-64 -mt-48">
+                <div className="w-full lg:w-6/12 px-4">
+                  <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200">
+                    <div className="flex-auto p-5 lg:p-10">
+                      <h4 className="text-2xl font-semibold">
+                        Pongase en contacto.
+                      </h4>
+                      <p className="leading-relaxed mt-1 mb-4 text-blueGray-500">
+                        Complete el siguiente formulario y nos estaremos comunicando a la brevedad.
+                      </p>
+                      <div className="relative w-full mb-3 mt-8">
+                        <label
+                          className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                          htmlFor="full-name"
+                        >
+                          Nombre Completo
+                        </label>
+                        <input
+                          name="user_name"
+                          type="text"
+                          className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                          placeholder="Nombre completo"
+                        />
+                      </div>
 
-                    <div className="relative w-full mb-3">
-                      <label
-                        className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                        htmlFor="email"
-                      >
-                        Email
-                      </label>
-                      <input
-                        type="email"
-                        className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                        placeholder="Email"
-                      />
-                    </div>
+                      <div className="relative w-full mb-3">
+                        <label
+                          className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                          htmlFor="email"
+                        >
+                          Email
+                        </label>
+                        <input
+                          name="user_email"
+                          type="email"
+                          className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                          placeholder="Email"
+                        />
+                      </div>
 
-                    <div className="relative w-full mb-3">
-                      <label
-                        className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                        htmlFor="message"
-                      >
-                        Mensaje
-                      </label>
-                      <textarea
-                        rows="4"
-                        cols="80"
-                        className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
-                        placeholder="Ingrese su mensaje..."
-                      />
-                    </div>
-                    <div className="text-center mt-6">
-                      <button
-                        className="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                        type="button"
-                      >
-                        Enviar
-                      </button>
+                      <div className="relative w-full mb-3">
+                        <label
+                          className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                          htmlFor="message"
+                        >
+                          Mensaje
+                        </label>
+                        <textarea
+                          name="message"
+                          rows="4"
+                          cols="80"
+                          className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
+                          placeholder="Ingrese su mensaje..."
+                        />
+                      </div>
+                      <div className="text-center mt-6">
+                        <input type='submit' value='Enviar' id='input-submit' style={{
+                           backgroundColor: "rgb(9, 73, 136)",
+                           color: "white",
+                           fontSize: "18px",
+                           fontWeight: "bold",
+                           padding: "10px 20px",
+                           borderRadius: "5%"
+                           }} />
+                        {/* <button
+                          className="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                          type="button"
+                        >
+                          Enviar
+                        </button> */}
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </form>
         </section>
         <FloatingWhatsApp {...{accountName: "A. Garcia Carrera e Hijos SA", phoneNumber: "1135612774",
           avatar:avatarImg.src, statusMessage:"Disponible Lun a Vier de 09:00 a 18:00",
